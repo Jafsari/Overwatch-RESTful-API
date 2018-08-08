@@ -11,3 +11,5 @@ mongoose.connect(URI.URI).then(function(){
 exports.Hero = require('./Hero');
 exports.Ability = require('./Ability');
 exports.Role = require('./Role');
+exports.MapL = require('./Map');
+exports.MapT = require('./MapType');
