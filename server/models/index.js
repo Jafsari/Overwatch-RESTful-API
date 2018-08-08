@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const URI = require('../config.js')
 mongoose.Promise = Promise;
 mongoose.set('debug',true);
-mongoose.connect(URI.URI).then(function(){
+mongoose.connect('mongodb://localhost/overwatch-api2').then(function(){
     console.log('Connected to MongoDB')
 }).catch(function(err){
     console.log(err)
