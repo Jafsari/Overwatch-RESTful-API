@@ -13,8 +13,17 @@ app.use(cors());
 
 
 const { heroRouter } = require("./routes");
+const { abilityRouter } = require("./routes");
+const { mapRouter } = require("./routes");
+const { mapTypeRouter } = require("./routes");
+const { roleRouter } = require("./routes");
+
 
 app.use("/hero", heroRouter);
+app.use("/abilities", abilityRouter);
+app.use("/maps", mapRouter);
+app.use("/mapTypes", mapTypeRouter);
+app.use("/role", roleRouter);
 
 
 app.use((req,res,next) => {
