@@ -5,10 +5,16 @@ const morgan = require('morgan');
 
 const app = express();
 
+
 app.use(morgan("tiny"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
+
+
+const { heroRouter } = require("./routes");
+
+app.use("/hero", heroRouter);
 
 
 app.use((req,res,next) => {

@@ -28,12 +28,13 @@ const heroSchema = new mongoose.Schema({
     Armor:{
         type:Number
     },
-    Role:{
-        type: Schema.Types.ObjectId, ref: 'Role',
-        type:String
-    },
+    Role:[{
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'Role'
+    }],
     Abilities:[{
-        type: Schema.Types.ObjectId, ref: 'Ability'
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'Ability'
     }],
     Strategy:{
         type:String

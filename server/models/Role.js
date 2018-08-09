@@ -2,6 +2,6 @@ const mongoose = require('mongoose');
 
 const roleSchema = new mongoose.Schema({
     Hero:[{
-        type: Schema.Types.ObjectId, ref: 'Hero'
+        type: mongoose.Schema.Types.ObjectId, ref: 'Hero'
     }]
 });

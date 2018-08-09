@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const mapSchema = new mongoose.Schema({
     Type:{
-        type: Schema.Types.ObjectId, ref: 'mapType'
+        type: mongoose.Schema.Types.ObjectId, ref: 'MapType'
     },
     Location:{
         type:String

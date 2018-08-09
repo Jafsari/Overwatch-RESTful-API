@@ -1,0 +1,1 @@
+exports.heroRouter = require('./heroes');

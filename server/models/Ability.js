@@ -1,6 +1,8 @@
-const heroSchema = new mongoose.Schema({
+const mongoose = require('mongoose');
+
+const abilitySchema = new mongoose.Schema({
 Hero:{
-     type: Schema.Types.ObjectId, ref: 'Hero' 
+     type: mongoose.Schema.Types.ObjectId, ref: 'Hero' 
 },
 Name:{
     type:String
@@ -49,5 +51,5 @@ reloadTime:{
 }
 });
 
-const Hero = mongoose.model('Ability', abilitySchema);
+const Ability = mongoose.model('Ability', abilitySchema);
 module.exports = Ability;
